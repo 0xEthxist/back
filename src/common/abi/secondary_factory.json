@@ -1,0 +1,446 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [],
+		"name": "ECDSA_InvalidSignature",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "ECDSA_InvalidSignatureLength",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "ECDSA_InvalidSignatureS",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "ERC1167_create2_Failed",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "RTNFactory_ArtaniomNameReserved",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "RTNFactory_ArtaniomSymbolReserved",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "RTNFactory_CollectionTypeNotFound",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "RTNFactory_DuplicateCollectionTypes",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "RTNFactory_LazyTypeNotAllowedWithinThisFunc",
+		"type": "error"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "nameMaxChars",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "symbolMaxChars",
+				"type": "uint256"
+			}
+		],
+		"name": "RTNFactory_MaxCharsFor_Name_Symbol_Are",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "RTNFactory_OnlyOwnerOfRTNodeFunction",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "RTNFactory_OnlyRTNodeFunction",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "RTNFactory_SetNoneZeroAddress",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "RTNFactory_TypesMustBeLTorEQwithCCperms",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "RTNFactory_WrongCollectionTypeIndex",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "RTNFactory_WrongKey",
+		"type": "error"
+	},
+	{
+		"inputs": [],
+		"name": "RTNFactory_WrongSignature",
+		"type": "error"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "previousAdmin",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "newAdmin",
+				"type": "address"
+			}
+		],
+		"name": "AdminChanged",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "beacon",
+				"type": "address"
+			}
+		],
+		"name": "BeaconUpgraded",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "createdCollection",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "symbol",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "typeAndVersion",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "catWeb2",
+				"type": "string"
+			}
+		],
+		"name": "CollectionCreated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint8",
+				"name": "version",
+				"type": "uint8"
+			}
+		],
+		"name": "Initialized",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "createdCollection",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "symbol",
+				"type": "string"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "maximumSupply",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "version",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "catWeb2",
+				"type": "string"
+			}
+		],
+		"name": "LazyCollectionCreated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "implementation",
+				"type": "address"
+			}
+		],
+		"name": "Upgraded",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "clonedCollection",
+				"type": "address"
+			}
+		],
+		"name": "addNewColletionType",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "collectionType",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "symbol",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "catWeb2",
+				"type": "string"
+			}
+		],
+		"name": "createCollection",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "maximumSupply",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "symbol",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "catWeb2",
+						"type": "string"
+					},
+					{
+						"internalType": "bytes",
+						"name": "signature",
+						"type": "bytes"
+					}
+				],
+				"internalType": "struct ArtaniomFactory.LazyCollectionVoucher",
+				"name": "voucher",
+				"type": "tuple"
+			}
+		],
+		"name": "createLazyCollection",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "collectionType",
+				"type": "uint256"
+			}
+		],
+		"name": "getVersionOfCollectionType",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "contract IFactoryReq",
+				"name": "_RTNode",
+				"type": "address"
+			}
+		],
+		"name": "initialize",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "proxiableUUID",
+		"outputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "index",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "newClonedCollection",
+				"type": "address"
+			}
+		],
+		"name": "replaceClonedCollectionType",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_publicKey",
+				"type": "address"
+			}
+		],
+		"name": "setPublicKey",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newImplementation",
+				"type": "address"
+			}
+		],
+		"name": "upgradeTo",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newImplementation",
+				"type": "address"
+			},
+			{
+				"internalType": "bytes",
+				"name": "data",
+				"type": "bytes"
+			}
+		],
+		"name": "upgradeToAndCall",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	}
+]

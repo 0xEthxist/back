@@ -1,0 +1,72 @@
+# You can copy and paste this template into a new `.gitlab-ci.yml` file.
+# You should not add this template to an existing `.gitlab-ci.yml` file by using the `include:` keyword.
+#
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Nodejs.gitlab-ci.yml
+
+# Official framework image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/node/tags/
+image: node:nvm use 16.15.0
+
+
+before_script:
+  - node -v
+  - npm -v
+# Pick zero or more services to be used on all builds.
+# Only needed when using a docker container to run your tests in.
+# Check out: https://docs.gitlab.com/ee/ci/services/index.html
+services:
+  - mongo:latest
+  - redis:latest
+
+
+stages:
+  # - build
+  # - test
+  - development
+
+
+variables:
+  SSH_KEY: $SSH_KEY
+
+# This folder is cached between builds
+# https://docs.gitlab.com/ee/ci/yaml/index.html#cache
+cache:
+  paths:
+    - node_modules/
+
+# Build:
+#   stage: build
+#   # before_script: 
+#   #   - npm install
+#   script:
+#     # - npm run build
+#     - echo "in build script"
+#     # - npm run build
+  
+# Test:
+#   stage: test
+#   script:
+#     # - npm run test 
+#     - echo "in test script"
+
+Development:
+  stage: development
+  only:
+    - development
+  before_script: 
+    - echo "$SSH_PRIVATE_KEY"
+    # Setup SSH deploy keys
+    - 'which ssh-agent || ( apt-get install -qq openssh-client )'
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+  environment:
+    name: staging
+    url: 162.254.32.188
+  script: 
+    - echo "in development script"
+    - ssh -o StrictHostKeyChecking=no root@162.254.32.188 "cd /home/artaniom_development && git pull origin development && npm i && npm run build && pm2 restart 0"

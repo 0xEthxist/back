@@ -1,0 +1,654 @@
+[
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "royaltyCommissionOfCollections",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "minBidStepPercentage",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "collection",
+				"type": "address"
+			},
+			{
+				"name": "NFTid",
+				"type": "uint256"
+			}
+		],
+		"name": "endForceAuction",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "collection",
+				"type": "address"
+			},
+			{
+				"name": "NFTid",
+				"type": "uint256"
+			},
+			{
+				"name": "newBaseValue",
+				"type": "uint256"
+			}
+		],
+		"name": "updateAuction",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "maxBidStartGap",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint24"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "maxBidDuration",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint24"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "primaryCommission",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "secondaryArtanCommission",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "minBaseValue",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint96"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "minBidDuration",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint24"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "secondaryMarketCommission",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "collection",
+				"type": "address"
+			},
+			{
+				"name": "NFTid",
+				"type": "uint256"
+			}
+		],
+		"name": "returnToVendor",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "minBidStartGap",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint24"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "endAuctionGap",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint24"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "royaltyCommissionOfArtan",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "collection",
+				"type": "address"
+			},
+			{
+				"name": "NFTid",
+				"type": "uint256"
+			}
+		],
+		"name": "reviewAnAuction",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "collection",
+				"type": "address"
+			},
+			{
+				"name": "NFTid",
+				"type": "uint256"
+			}
+		],
+		"name": "placeBid",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_beneficiary",
+				"type": "address"
+			}
+		],
+		"name": "changeBeneficiary",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "collection",
+				"type": "address"
+			},
+			{
+				"name": "NFTid",
+				"type": "uint256"
+			},
+			{
+				"name": "_baseValue",
+				"type": "uint96"
+			},
+			{
+				"name": "_startTime",
+				"type": "uint256"
+			},
+			{
+				"name": "_endTime",
+				"type": "uint256"
+			}
+		],
+		"name": "setAuction",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "collection",
+				"type": "address"
+			},
+			{
+				"name": "NFTid",
+				"type": "uint256"
+			}
+		],
+		"name": "completeAuction",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "NFTAllowanceContract",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_Artaniom721",
+				"type": "address"
+			}
+		],
+		"name": "changeArtaniom721",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "Artaniom721",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"name": "_NFTAllowanceContract",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "baseValue",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"name": "startTime",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"name": "endTime",
+				"type": "uint256"
+			}
+		],
+		"name": "AuctionSet",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "newBaseValue",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"name": "baseValue",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"name": "updatedTime",
+				"type": "uint256"
+			}
+		],
+		"name": "AuctionUpdated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "bidder",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "bidValue",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"name": "bidTime",
+				"type": "uint256"
+			}
+		],
+		"name": "AuctionGetsBid",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "baseValue",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"name": "executedTime",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"name": "endTime",
+				"type": "uint256"
+			}
+		],
+		"name": "AuctionReturnedToVendor",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "newEndTime",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"name": "lastEndTime",
+				"type": "uint256"
+			}
+		],
+		"name": "AuctionTimeExtended",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "auctionWinner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "soldValue",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"name": "elapsedTimeAfterAuctionEndTime",
+				"type": "uint256"
+			}
+		],
+		"name": "AuctionWasSuccessful",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "previousBidder",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "refundedValue",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"name": "bidNumber",
+				"type": "uint256"
+			}
+		],
+		"name": "RefundedPreviousBid",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "primaryCommissionShare",
+				"type": "uint256"
+			}
+		],
+		"name": "PrimarySold",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "royaltyAddress",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "royaltyShare",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"name": "secondaryCommissinShare",
+				"type": "uint256"
+			}
+		],
+		"name": "SecondarySold",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "lastBidder",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "latestBidAmount",
+				"type": "uint256"
+			}
+		],
+		"name": "AuctionForcedAfterBids",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [],
+		"name": "AuctionForcedBeforeFirstBid",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "lastBidder",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "latestBidAmount",
+				"type": "uint256"
+			}
+		],
+		"name": "PausedAuctionForcedAfterBids",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [],
+		"name": "PausedAuctionForcedBeforeFirstBid",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "wasActive",
+				"type": "bool"
+			}
+		],
+		"name": "AuctionPaused",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "isActive",
+				"type": "bool"
+			}
+		],
+		"name": "AuctionResumed",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "tokenContract",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "tokenId",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"name": "tokenVendor",
+				"type": "address"
+			}
+		],
+		"name": "TargetNFT",
+		"type": "event"
+	}
+]
